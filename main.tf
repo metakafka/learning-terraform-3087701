@@ -1,6 +1,9 @@
 data "aws_ami" "app_ami" {
   most_recent = true
 
+  data "aws_vpc" {
+    default = false
+  }
   filter {
     name   = "name"
     values = ["bitnami-tomcat-*-x86_64-hvm-ebs-nami"]
