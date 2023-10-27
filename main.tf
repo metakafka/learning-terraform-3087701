@@ -16,7 +16,7 @@ data "aws_ami" "app_ami" {
 data "aws_vpc" "itop-dev-vpc" {
   id         = "vpc-0b549913b7f2aae58"
   cidr_block = "10.49.28.0/26"
-  default    = true
+  default    = false
 }
 
 resource "aws_instance" "web" {
