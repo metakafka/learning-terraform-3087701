@@ -14,7 +14,9 @@ data "aws_ami" "app_ami" {
   owners = ["979382823631"] # Bitnami
 }
 data "aws_vpc" "itop-dev-vpc" {
-  default = false
+  id         = "vpc-0b549913b7f2aae58"
+  cidr_block = "10.49.28.0/26"
+
 }
 
 resource "aws_instance" "web" {
